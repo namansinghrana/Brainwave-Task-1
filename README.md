@@ -230,6 +230,6 @@ Using MongoDB queries, various operations can be performed on the database to re
 
 ## Contact
 
-If you have any questions or want to contribute, feel free to reach out to me on [LinkedIn]([https://www.linkedin.com/in/](https://www.linkedin.com/in/naman-singh-rana-a54842319/]) or via [Email](mailto:namanr738@gmail.com).
+If you have any questions or want to contribute, feel free to reach out to me on [LinkedIn]([[https://www.linkedin.com/in/](https://www.linkedin.com/in/naman-singh-rana-a54842319/)]) or via [Email](mailto:namanr738@gmail.com).
 
 ---
