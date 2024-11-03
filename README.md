@@ -225,7 +225,7 @@ Using MongoDB queries, various operations can be performed on the database to re
 ```
 
 ## SnapShots:
-<img width="724" alt="image" src="https://github.com/user-attachments/assets/5091a537-7506-47d1-acbc-99df0f2f3ca5">
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/5091a537-7506-47d1-acbc-99df0f2f3ca5">
 
 
 ## Contact
