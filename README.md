@@ -194,7 +194,7 @@ To connect documents across collections, specific documents' `_id` values were r
 
 Example:
 
-```js
+```bash
 
 const aliceId = db.Users.findOne({ "email": "alice@example.com" })._id;
 
