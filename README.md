@@ -2,6 +2,7 @@
 
 ---
 
+
 #### **1. Objective**
 
 The objective of this database design was to create a simple, functional library management system in MongoDB. The system enables tracking of library members (users), books in the library, librarians who manage the library operations, and records of books borrowed by users. This relational-style NoSQL database design ensures an efficient way to manage and query essential library data.
