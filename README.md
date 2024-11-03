@@ -1,7 +1,7 @@
 # **Library Management Database System: Design and Implementation Report**
 
 ---
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/aaae0c94-ca93-4cbc-899c-1a06a28cc2bb">
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/aaae0c94-ca93-4cbc-899c-1a06a28cc2bb">
 
 #### **1. Objective**
 
