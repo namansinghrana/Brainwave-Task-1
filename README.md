@@ -46,20 +46,14 @@ This collection stores data about library members, including their names, email 
 
 **Sample Data**:
 
-```json
-
+```bash
 {
 
     "name": "Alice Johnson",
-
     "email": "alice@example.com",
-
     "phone": "123-456-7890",
-
     "membership_date": ISODate("2023-01-15")
-
 }
-
 ```
 
 ---
@@ -82,22 +76,15 @@ This collection holds information about each book in the library, including the 
 
 **Sample Data**:
 
-```json
-
+```bash
 {
 
     "title": "To Kill a Mockingbird",
-
     "author": "Harper Lee",
-
     "publisher": "J.B. Lippincott & Co.",
-
     "year_published": 1960,
-
     "status": "Available"
-
 }
-
 ```
 
 ---
@@ -118,20 +105,14 @@ This collection stores information about librarians who manage the library's ope
 
 **Sample Data**:
 
-```json
-
+```bash
 {
 
     "name": "John Doe",
-
     "email": "john.doe@example.com",
-
     "phone": "555-1234",
-
     "hire_date": ISODate("2022-08-20")
-
 }
-
 ```
 
 ---
@@ -154,22 +135,15 @@ This collection tracks records of books borrowed by users, linking **Users**, **
 
 **Sample Data**:
 
-```json
-
+```bash
 {
 
     "user_id": ObjectId("USER_ID"),
-
     "book_id": ObjectId("BOOK_ID"),
-
     "librarian_id": ObjectId("LIBRARIAN_ID"),
-
     "borrow_date": ISODate("2023-03-01"),
-
     "return_date": ISODate("2023-03-10")
-
 }
-
 ```
 
 ---
@@ -183,9 +157,7 @@ Initial data was inserted into the **Users**, **Books**, and **Librarians** coll
 Example:
 
 ```js
-
 db.Users.insertMany([{ "name": "Alice Johnson", "email": "alice@example.com", ... }]);
-
 ```
 
 #### Step 2: Retrieve ObjectId References for `BorrowedBooks` Collection
@@ -195,13 +167,9 @@ To connect documents across collections, specific documents' `_id` values were r
 Example:
 
 ```bash
-
 const aliceId = db.Users.findOne({ "email": "alice@example.com" })._id;
-
 const mockingbirdId = db.Books.findOne({ "title": "To Kill a Mockingbird" })._id;
-
 const johnDoeId = db.Librarians.findOne({ "email": "john.doe@example.com" })._id;
-
 ```
 
 #### Step 3: Insert Document into `BorrowedBooks` with References
@@ -210,22 +178,16 @@ The `_id` values retrieved in Step 2 were used to insert a borrowing record into
 
 Example:
 
-```js
-
+```bash
 db.BorrowedBooks.insertOne({
 
     "user_id": aliceId,
-
     "book_id": mockingbirdId,
-
     "librarian_id": johnDoeId,
-
     "borrow_date": ISODate("2023-03-01"),
-
     "return_date": ISODate("2023-03-10")
 
 });
-
 ```
 
 ---
@@ -236,39 +198,33 @@ Using MongoDB queries, various operations can be performed on the database to re
 
 - **Find all books borrowed by a specific user**:
 
-  ```js
-
+```bash
   const aliceId = db.Users.findOne({ "email": "alice@example.com" })._id;
-
   db.BorrowedBooks.find({ "user_id": aliceId });
-
-  ```
+```
 
 - **List all available books**:
 
-  ```js
-
+```bash
   db.Books.find({ "status": "Available" });
-
-  ```
+```
 
 - **Find all transactions managed by a specific librarian**:
 
-  ```js
-
+```bash
   const johnDoeId = db.Librarians.findOne({ "email": "john.doe@example.com" })._id;
-
   db.BorrowedBooks.find({ "librarian_id": johnDoeId });
-
-  ```
+```
 
 - **Update the status of a returned book to "Available"**:
 
-  ```js
-
+```bash
   const mockingbirdId = db.Books.findOne({ "title": "To Kill a Mockingbird" })._id;
-
   db.Books.updateOne({ "_id": mockingbirdId }, { $set: { "status": "Available" } });
+```
 
-  ```
-  
+## Contact
+
+If you have any questions or want to contribute, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/shaswat-gusain-2924a324a) or via [Email](mailto:shaswatgusain1@gmail.com).
+
+---
