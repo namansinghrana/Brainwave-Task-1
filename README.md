@@ -223,6 +223,10 @@ Using MongoDB queries, various operations can be performed on the database to re
   db.Books.updateOne({ "_id": mockingbirdId }, { $set: { "status": "Available" } });
 ```
 
+## SnapShots:
+<img width="724" alt="image" src="https://github.com/user-attachments/assets/5091a537-7506-47d1-acbc-99df0f2f3ca5">
+
+
 ## Contact
 
 If you have any questions or want to contribute, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/shaswat-gusain-2924a324a) or via [Email](mailto:shaswatgusain1@gmail.com).
